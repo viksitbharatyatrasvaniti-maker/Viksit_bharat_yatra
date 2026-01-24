@@ -7,24 +7,61 @@ import Link from "next/link";
 const Hero = () => {
     return (
         <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-gray-900">
-            {/* Background Video with Parallax Effect */}
-            <div className="absolute inset-0 z-0">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover opacity-80"
+            {/* India Map Background Shape with Scrolling Images */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none overflow-hidden pb-10">
+                <div
+                    className="relative h-[85vh] w-[75vh] max-w-[90vw] max-h-[800px] flex flex-wrap content-start items-start justify-center gap-2 overflow-hidden"
+                    style={{
+                        maskImage: "url('/india-map.svg')",
+                        maskSize: "contain",
+                        maskRepeat: "no-repeat",
+                        maskPosition: "center",
+                        WebkitMaskImage: "url('/india-map.svg')",
+                        WebkitMaskSize: "contain",
+                        WebkitMaskRepeat: "no-repeat",
+                        WebkitMaskPosition: "center",
+                    }}
                 >
-                    <source
-                        src="https://www.pexels.com/download/video/4684159"
-                        type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                </video>
-                {/* Cinema-grade Overlay */}
-                <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/40 to-black/30" />
-                <div className="absolute inset-0 bg-linear-to-r from-black/50 via-transparent to-black/50" />
+                    {/* Moving Image Grid */}
+                    <div className="absolute inset-0 grid grid-cols-4 gap-2 opacity-80">
+                        {[
+                            "https://loremflickr.com/400/600/tajmahal",
+                            "https://loremflickr.com/400/600/isro,rocket",
+                            "https://loremflickr.com/400/600/india,dance",
+                            "https://loremflickr.com/400/600/india,temple",
+                            "https://loremflickr.com/400/600/india,train",
+                            "https://loremflickr.com/400/600/kerala,boat",
+                            "https://loremflickr.com/400/600/indian,farmer",
+                            "https://loremflickr.com/400/600/lotus,temple",
+                            "https://loremflickr.com/400/600/himalaya",
+                            "https://loremflickr.com/400/600/india,city",
+                            "https://loremflickr.com/400/600/india,tech",
+                            "https://loremflickr.com/400/600/india,people",
+                        ].map((src, i) => (
+                            <motion.div
+                                key={i}
+                                className="relative w-full aspect-[2/3] overflow-hidden rounded-lg"
+                                initial={{ y: 0 }}
+                                animate={{ y: [0, -100, 0] }}
+                                transition={{
+                                    duration: 20 + i * 2,
+                                    repeat: Infinity,
+                                    ease: "linear",
+                                }}
+                            >
+                                <img
+                                    src={src}
+                                    alt="Viksit Bharat"
+                                    className="w-full h-full object-cover opacity-90 hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-60" />
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Overlay Gradient to keep the saffron/green theme feel */}
+                    <div className="absolute inset-0 bg-linear-to-br from-saffron/40 via-white/20 to-green-600/40 mix-blend-overlay z-10" />
+                </div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
