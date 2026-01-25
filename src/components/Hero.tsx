@@ -57,17 +57,17 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
-                        className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+                        className="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-12 w-full px-4"
                     >
                         <a
                             href="/register"
-                            className="px-8 py-3 bg-saffron text-white text-lg font-semibold rounded-full shadow-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 border border-saffron"
+                            className="px-5 py-2.5 text-sm sm:px-8 sm:py-3 sm:text-lg bg-saffron text-white font-semibold rounded-full shadow-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 border border-saffron whitespace-nowrap"
                         >
                             Join the Yatra
                         </a>
                         <a
                             href="/about-yatra"
-                            className="px-8 py-3 bg-transparent text-white text-lg font-semibold rounded-full border-2 border-white/80 shadow-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
+                            className="px-5 py-2.5 text-sm sm:px-8 sm:py-3 sm:text-lg bg-transparent text-white font-semibold rounded-full border-2 border-white/80 shadow-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm whitespace-nowrap"
                         >
                             Know More
                         </a>
