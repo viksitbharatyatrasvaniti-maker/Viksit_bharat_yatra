@@ -50,7 +50,7 @@ const HeroMap = () => {
                 <defs>
                     <mask id="india-mask" maskUnits="userSpaceOnUse">
                         <Geographies geography={indiaUrl}>
-                            {({ geographies }) =>
+                            {({ geographies }: { geographies: any[] }) =>
                                 geographies.map((geo) => (
                                     <Geography
                                         key={geo.rsmKey}
@@ -68,7 +68,7 @@ const HeroMap = () => {
                 {/* Layer 1: World / Neighbors (Background) */}
                 {/* Render this FIRST so it is behind the images */}
                 <Geographies geography={worldUrl} style={{ pointerEvents: 'none' }}>
-                    {({ geographies }) =>
+                    {({ geographies }: { geographies: any[] }) =>
                         geographies.map((geo) => {
                             const name = geo.properties.name;
                             const isNeighbor = relevantNeighbors.includes(name);
@@ -125,7 +125,7 @@ const HeroMap = () => {
 
                 {/* Layer 3: Official India Border (Outline Only) */}
                 <Geographies geography={indiaUrl} style={{ pointerEvents: 'none' }}>
-                    {({ geographies }) =>
+                    {({ geographies }: { geographies: any[] }) =>
                         geographies.map((geo) => (
                             <Geography
                                 key={geo.rsmKey}
