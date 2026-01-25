@@ -41,11 +41,10 @@ const Stats = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <div className="text-7xl md:text-9xl font-bold mb-4 font-mono tracking-tighter drop-shadow-md">
-                        <Counter from={0} to={5687} />
-                        <span className="ml-2 text-5xl md:text-7xl">+</span>
+                        <Counter from={0} to={100}/>
                     </div>
                     <div className="text-2xl md:text-4xl font-serif font-medium tracking-wide text-orange-100">
-                        Km Travelled
+                        crore kilometers by 2047
                     </div>
                 </motion.div>
 
@@ -56,7 +55,7 @@ const Stats = () => {
                     transition={{ delay: 0.3 }}
                     className="mt-8 text-lg md:text-xl text-orange-100/90 max-w-2xl"
                 >
-                    Across the diverse landscapes of India, witnessing growth, culture, and unity.
+                    Each journey is a thread, weaving personal transformation into the fabric of a developed Bharat.
                 </motion.p>
             </div>
         </section>

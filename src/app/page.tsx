@@ -13,7 +13,7 @@ export default function Home() {
       <About />
       <Stats />
       <WhyJoin />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTA />
       <Contact />
     </div>

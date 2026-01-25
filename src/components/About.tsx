@@ -1,38 +1,68 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lightbulb, HeartHandshake, Compass, Zap, ArrowUpRight } from "lucide-react";
+import {
+  Brain,
+  Repeat,
+  Users,
+  Sparkles,
+  ShieldCheck,
+  Target,
+  BookOpenCheck,
+  ArrowUpRight
+} from "lucide-react";
 import Link from "next/link";
 
 const features = [
-    {
-        icon: Lightbulb,
-        title: "Generate New Ideas",
-        description: "Exposure to diverse perspectives sparks the innovation needed to build a Viksit Bharat.",
-        color: "bg-blue-50 text-blue-600",
-        border: "group-hover:border-blue-200"
-    },
-    {
-        icon: HeartHandshake,
-        title: "Foster Acceptance",
-        description: "Breaking barriers of region and language to unite the youth of the nation.",
-        color: "bg-orange-50 text-orange-600",
-        border: "group-hover:border-orange-200"
-    },
-    {
-        icon: Compass,
-        title: "Expand Your Horizons",
-        description: "Step beyond the routine. Witness the scale of India's development firsthand.",
-        color: "bg-green-50 text-green-600",
-        border: "group-hover:border-green-200"
-    },
-    {
-        icon: Zap,
-        title: "Shatter Old Patterns",
-        description: "Challenge assumptions and embrace a dynamic, action-oriented mindset.",
-        color: "bg-teal-50 text-teal-600",
-        border: "group-hover:border-teal-200"
-    },
+  {
+    icon: Brain,
+    title: "Self-awareness",
+    description: `The Yatra is thoughtfully curated around your aspirations and duration, creating space for deep reflection and a clearer understanding of self and purpose.`,
+    color: "bg-indigo-50 text-indigo-600",
+    border: "group-hover:border-indigo-200"
+  },
+  {
+    icon: Repeat,
+    title: "Breaking patterns",
+    description: "Stepping out of routine helps break habitual patterns and long-held archetypes, building the courage to think beyond inherited roles and limitations.",
+    color: "bg-rose-50 text-rose-600",
+    border: "group-hover:border-rose-200"
+  },
+  {
+    icon: Users,
+    title: "Acceptance",
+    description: "By engaging with diverse people and cultures, the journey broadens understanding and nurtures a deeper openness to different ways of life and thought.",
+    color: "bg-emerald-50 text-emerald-600",
+    border: "group-hover:border-emerald-200"
+  },
+  {
+    icon: Sparkles,
+    title: "New ideas",
+    description: "Exposure to varied realities and lived experiences sparks fresh ideas and expands how individuals perceive possibilities and challenges.",
+    color: "bg-cyan-50 text-cyan-600",
+    border: "group-hover:border-cyan-200"
+  },
+  {
+    icon: ShieldCheck,
+    title: "Resilience",
+    description: "Navigating unfamiliar situations strengthens resilience, instilling the courage to adapt, endure, and grow through uncertainty.",
+    color: "bg-amber-50 text-amber-600",
+    border: "group-hover:border-amber-200"
+  },
+  {
+    icon: Target,
+    title: "Purpose alignment",
+    description: "The Yatra helps align personal aspirations with meaningful action, enabling individuals to consciously contribute to the larger vision of a Viksit Bharat.",
+    color: "bg-violet-50 text-violet-600",
+    border: "group-hover:border-violet-200"
+  },
+  {
+    icon: BookOpenCheck,
+    title: "Lifelong impact",
+    description: "Each journey leaves a lasting legacy—insights, stories, and learnings that enrich the shared repository and guide future Yatris.",
+    color: "bg-sky-50 text-sky-600",
+    border: "group-hover:border-sky-200"
+  }
 ];
 
 const About = () => {
@@ -55,8 +85,9 @@ const About = () => {
                             Our Philosophy
                         </span>
                         <h2 className="text-5xl md:text-6xl font-serif font-bold text-gray-900 leading-[1.1]">
-                            Experience the <br />
-                            <span className="text-saffron">Soul of India</span>
+                            Vyakti se
+<br />
+                            <span className="text-saffron">Viksit Bharat</span> tak
                         </h2>
                     </motion.div>
 
@@ -68,16 +99,16 @@ const About = () => {
                         className="lg:pt-4"
                     >
                         <p className="text-xl text-gray-600 leading-relaxed font-light mb-8">
-                            The <strong className="text-gray-900 font-medium">Viksit Bharat Yatra</strong> is more than just a journey; it's a transformative experience designed to shake you mentally, physically, and emotionally—awakening a renewed sense of purpose.
+                            The <strong className="text-gray-900 font-medium">Viksit Bharat Yatra</strong> is more than just a journey; it is a conscious solo experience that challenges comfort zones and invites individuals to explore Bharat at their own pace. Through reflection and lived experiences, aspirations evolve, perspectives shift, and individuals gain clarity on their role—enabling them to contribute meaningfully and inclusively to the larger vision of a Viksit Bharat.
                         </p>
                         <div className="flex gap-8">
                             <div>
-                                <h4 className="text-4xl font-bold text-slate-900 mb-1">28+</h4>
+                                <h4 className="text-4xl font-bold text-slate-900 mb-1">28</h4>
                                 <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">States</p>
                             </div>
                             <div>
-                                <h4 className="text-4xl font-bold text-slate-900 mb-1">1000+</h4>
-                                <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">Participants</p>
+                                <h4 className="text-4xl font-bold text-slate-900 mb-1">8</h4>
+                                <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">UTs</p>
                             </div>
                             <div>
                                 <h4 className="text-4xl font-bold text-slate-900 mb-1">∞</h4>
@@ -89,7 +120,7 @@ const About = () => {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {features.map((feature, index) => (
-                        <Link href="/about-yatra" key={index} className="block group">
+                        // <Link href="/about-yatra" key={index} className="block group">
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +143,7 @@ const About = () => {
                                     <ArrowUpRight className="w-5 h-5 text-gray-300" />
                                 </div>
                             </motion.div>
-                        </Link>
+                        // </Link>
                     ))}
                 </div>
             </div>
