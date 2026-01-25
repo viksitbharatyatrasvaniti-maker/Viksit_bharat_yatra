@@ -21,7 +21,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-2 tracking-tight drop-shadow-2xl"
+                        className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-2 tracking-tight drop-shadow-2xl"
                     >
                         <span className="bg-gradient-to-r from-saffron via-orange-200 to-white bg-clip-text text-transparent">
                             Experiencing, Envisaging,
@@ -47,10 +47,31 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
-                        className="text-lg md:text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed drop-shadow-lg font-light"
+                        className="text-sm md:text-xl text-gray-200 mb-10 max-w-4xl mx-auto leading-relaxed drop-shadow-lg font-light"
                     >
                         Endeavor with the Viksit Bharat Yatra—a journey across diverse geographies, people, and cultures, inviting reflection, imagination, and the pursuit of aspirations aligned with the idea of a Viksit Bharat.
                     </motion.p>
+
+                    {/* CTA Buttons */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.8 }}
+                        className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+                    >
+                        <a
+                            href="/register"
+                            className="px-8 py-3 bg-saffron text-white text-lg font-semibold rounded-full shadow-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 border border-saffron"
+                        >
+                            Join the Yatra
+                        </a>
+                        <a
+                            href="/about-yatra"
+                            className="px-8 py-3 bg-transparent text-white text-lg font-semibold rounded-full border-2 border-white/80 shadow-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
+                        >
+                            Know More
+                        </a>
+                    </motion.div>
 
                     {/* Branding */}
                     <motion.div
@@ -60,14 +81,15 @@ const Hero = () => {
                         className="mt-8 flex flex-col items-center gap-3"
                     >
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-[0.2em] bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm">
-                            Initiative by Svaniti
+                            <a href="https://www.svaniti.in/">Initiative by Svaniti</a>
                         </span>
                         <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300 shadow-xl">
-                            <img
-                                src="/svaniti-logo.png"
-                                alt="Svaniti"
-                                className="h-12 w-auto object-contain"
-                            />
+                            <a href="https://www.svaniti.in/">
+                                <img
+                                    src="/svaniti-logo.png"
+                                    alt="Svaniti"
+                                    className="h-12 w-auto object-contain"
+                                /></a>
                         </div>
                     </motion.div>
                 </div>
