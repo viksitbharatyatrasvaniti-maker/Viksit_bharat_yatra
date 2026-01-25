@@ -12,8 +12,8 @@ const Navbar = () => {
         { name: "Home", href: "/" },
         { name: "About Yatra", href: "/about-yatra" },
         { name: "Blogs", href: "/blogs" },
-        { name: "Gallery", href: "#gallery" },
-        { name: "Contact", href: "#contact" },
+        // { name: "Gallery", href: "#gallery" },
+        // { name: "Contact", href: "#contact" },
     ];
 
     return (

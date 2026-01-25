@@ -17,21 +17,38 @@ const Contact = () => {
     const inputClasses = "w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-4 text-gray-900 focus:outline-none focus:border-saffron focus:bg-orange-50/30 transition-all duration-300 placeholder-transparent peer";
     const labelClasses = "absolute left-4 -top-3.5 text-xs text-saffron transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-saffron font-medium z-10 bg-transparent";
 
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [statusMessage, setStatusMessage] = useState("");
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        const subject = `Viksit Bharat Yatra Inquiry from ${formData.firstName} ${formData.lastName}`;
-        const body = `Name: ${formData.firstName} ${formData.lastName}
-Email: ${formData.email}
-Phone: ${formData.phone}
+        setStatus('loading');
+        setStatusMessage("");
 
-Message:
-${formData.message}`;
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
 
-        window.location.href = `mailto:office@svaniti.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const data = await response.json();
+
+            if (response.ok) {
+                setStatus('success');
+                setStatusMessage("Message sent successfully! We'll be in touch soon.");
+                setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+            } else {
+                throw new Error(data.error || "Failed to send message");
+            }
+        } catch (error: any) {
+            setStatus('error');
+            setStatusMessage(error.message || "Something went wrong. Please try again or email us directly.");
+        }
     };
 
     return (
@@ -240,14 +257,26 @@ ${formData.message}`;
                                 <label htmlFor="message" className={labelClasses}>How can we help you?</label>
                             </div>
 
-                            <div className="pt-4">
+                            <div className="pt-4 space-y-4">
                                 <button
                                     type="submit"
-                                    className="group w-full md:w-auto px-10 py-4 bg-slate-900 text-white rounded-xl font-bold text-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 active:scale-95 cursor-pointer"
+                                    disabled={status === 'loading' || status === 'success'}
+                                    className={`group w-full md:w-auto px-10 py-4 text-white rounded-xl font-bold text-lg transition-all shadow-lg flex items-center justify-center gap-3 
+                                        ${status === 'success' ? 'bg-green-600 hover:bg-green-700' : 'bg-slate-900 hover:bg-slate-800 hover:-translate-y-1 active:scale-95'}
+                                        ${status === 'loading' ? 'opacity-70 cursor-wait' : ''}
+                                    `}
                                 >
-                                    Send Message
-                                    <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    {status === 'loading' ? 'Sending...' : status === 'success' ? 'Message Sent' : 'Send Message'}
+                                    {status !== 'loading' && status !== 'success' && (
+                                        <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    )}
                                 </button>
+
+                                {statusMessage && (
+                                    <p className={`text-sm ${status === 'error' ? 'text-red-500' : 'text-green-600'} font-medium animate-pulse`}>
+                                        {statusMessage}
+                                    </p>
+                                )}
                             </div>
                         </form>
                     </div>
