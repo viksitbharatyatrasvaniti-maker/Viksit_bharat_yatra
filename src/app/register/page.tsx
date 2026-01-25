@@ -59,7 +59,7 @@ const RegisterPage = () => {
                             Back to Home
                         </Link>
                         <h1 className="text-4xl font-bold text-gray-900 tracking-tight mb-2">Create Account</h1>
-                        <p className="text-gray-500 text-lg">Join the Viksit Bharat Darshan Yatra today.</p>
+                        <p className="text-gray-500 text-lg">Join the Viksit Bharat Yatra today.</p>
                     </div>
 
                     {/* Google Button */}

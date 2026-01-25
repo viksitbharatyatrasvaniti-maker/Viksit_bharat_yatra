@@ -13,7 +13,7 @@ const CTA = () => {
     };
 
     return (
-        <section className="relative py-24 bg-blue-900 overflow-hidden">
+        <section className="relative py-24 bg-slate-900 overflow-hidden">
             {/* Background elements */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse"></div>
@@ -32,7 +32,7 @@ const CTA = () => {
                         Ready to Transform Your <br />
                         <span className="text-saffron">Journey?</span>
                     </h2>
-                    <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+                    <p className="text-xl text-slate-100 mb-12 max-w-2xl mx-auto">
                         Join thousands of youth in shaping the future of India. Whether you're ready to register or want to learn more, your first step starts here.
                     </p>
 
@@ -43,7 +43,7 @@ const CTA = () => {
                             <span className="relative z-10 flex items-center gap-2 justify-center">
                                 Register Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="absolute inset-0 bg-linear-to-r from-orange-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </Link>
 
                         <Link href="/about-yatra"

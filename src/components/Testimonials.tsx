@@ -56,7 +56,7 @@ const Testimonials = () => {
                 <div className="absolute top-20 left-10 text-saffron/5">
                     <Quote size={120} />
                 </div>
-                <div className="absolute bottom-20 right-10 text-blue-900/5 rotate-180">
+                <div className="absolute bottom-20 right-10 text-slate-900/5 rotate-180">
                     <Quote size={120} />
                 </div>
             </div>
@@ -114,7 +114,7 @@ const Testimonials = () => {
                                     </div>
                                     <div className="mt-4 flex flex-wrap gap-2">
                                         {testimonial.tags.map(tag => (
-                                            <span key={tag} className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
+                                            <span key={tag} className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-50 text-slate-700 border border-slate-100">
                                                 #{tag}
                                             </span>
                                         ))}
