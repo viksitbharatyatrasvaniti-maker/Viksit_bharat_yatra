@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Stats from "@/components/Stats";
 import WhyJoin from "@/components/WhyJoin";
 import Testimonials from "@/components/Testimonials";
+import Partnerships from "@/components/Partnerships";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 
@@ -13,8 +14,9 @@ export default function Home() {
       <About />
       <Stats />
       <WhyJoin />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <CTA />
+      <Partnerships />
       <Contact />
     </div>
   );
