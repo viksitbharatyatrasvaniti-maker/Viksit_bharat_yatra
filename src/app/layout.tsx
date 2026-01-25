@@ -14,7 +14,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Viksit Bharat Darshan Yatra",
+  title: "Viksit Bharat Yatra",
   description: "Experience the journey of a developed India.",
 };
 

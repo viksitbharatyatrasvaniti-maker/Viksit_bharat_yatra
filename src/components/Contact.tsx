@@ -49,7 +49,7 @@ const Contact = () => {
                     className="bg-white rounded-4xl shadow-2xl overflow-hidden grid lg:grid-cols-5 min-h-[700px]"
                 >
                     {/* Info Panel - 2/5 width */}
-                    <div className="lg:col-span-2 bg-linear-to-br from-blue-900 to-blue-950 p-12 text-white relative overflow-hidden flex flex-col justify-between">
+                    <div className="lg:col-span-2 bg-linear-to-br from-slate-900 to-slate-950 p-12 text-white relative overflow-hidden flex flex-col justify-between">
                         {/* Decorative Pattern */}
                         <div className="absolute inset-0 opacity-10" style={{
                             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.8) 1px, transparent 0)',
@@ -61,8 +61,8 @@ const Contact = () => {
                                 Let's Start Your <br />
                                 <span className="text-saffron">Journey</span>
                             </h2>
-                            <p className="text-blue-100 text-lg mb-12 leading-relaxed">
-                                Connect with us to join the Viksit Bharat Darshan Yatra. We are here to answer your queries and welcome you to the movement.
+                            <p className="text-slate-100 text-lg mb-12 leading-relaxed">
+                                Connect with us to join the Viksit Bharat Yatra. We are here to answer your queries and welcome you to the movement.
                             </p>
 
                             <div className="space-y-8">
@@ -75,7 +75,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-lg mb-1">Visit Us</h3>
-                                        <p className="text-blue-100/80 leading-relaxed">Ministry of Youth Affairs & Sports<br />Shastri Bhawan, New Delhi</p>
+                                        <p className="text-slate-100/80 leading-relaxed">Ministry of Youth Affairs & Sports<br />Shastri Bhawan, New Delhi</p>
                                     </div>
                                 </motion.div>
 
@@ -88,7 +88,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-lg mb-1">Email Us</h3>
-                                        <p className="text-blue-100/80">contact@viksitbharatyatra.gov.in</p>
+                                        <p className="text-slate-100/80">contact@viksitbharatyatra.gov.in</p>
                                     </div>
                                 </motion.div>
 
@@ -101,7 +101,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-lg mb-1">Call Us</h3>
-                                        <p className="text-blue-100/80">+91 11 2338 6520</p>
+                                        <p className="text-slate-100/80">+91 11 2338 6520</p>
                                     </div>
                                 </motion.div>
                             </div>
@@ -192,7 +192,7 @@ const Contact = () => {
                             <div className="pt-4">
                                 <button
                                     type="submit"
-                                    className="group w-full md:w-auto px-10 py-4 bg-blue-900 text-white rounded-xl font-bold text-lg hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 active:scale-95"
+                                    className="group w-full md:w-auto px-10 py-4 bg-slate-900 text-white rounded-xl font-bold text-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 active:scale-95"
                                 >
                                     Send Message
                                     <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />

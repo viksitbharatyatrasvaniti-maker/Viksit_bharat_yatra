@@ -30,8 +30,8 @@ const features = [
         icon: Zap,
         title: "Shatter Old Patterns",
         description: "Challenge assumptions and embrace a dynamic, action-oriented mindset.",
-        color: "bg-purple-50 text-purple-600",
-        border: "group-hover:border-purple-200"
+        color: "bg-teal-50 text-teal-600",
+        border: "group-hover:border-teal-200"
     },
 ];
 
@@ -68,19 +68,19 @@ const About = () => {
                         className="lg:pt-4"
                     >
                         <p className="text-xl text-gray-600 leading-relaxed font-light mb-8">
-                            The <strong className="text-gray-900 font-medium">Viksit Bharat Darshan Yatra</strong> is more than just a journey; it's a transformative experience designed to shake you mentally, physically, and emotionally—awakening a renewed sense of purpose.
+                            The <strong className="text-gray-900 font-medium">Viksit Bharat Yatra</strong> is more than just a journey; it's a transformative experience designed to shake you mentally, physically, and emotionally—awakening a renewed sense of purpose.
                         </p>
                         <div className="flex gap-8">
                             <div>
-                                <h4 className="text-4xl font-bold text-blue-900 mb-1">28+</h4>
+                                <h4 className="text-4xl font-bold text-slate-900 mb-1">28+</h4>
                                 <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">States</p>
                             </div>
                             <div>
-                                <h4 className="text-4xl font-bold text-blue-900 mb-1">1000+</h4>
+                                <h4 className="text-4xl font-bold text-slate-900 mb-1">1000+</h4>
                                 <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">Participants</p>
                             </div>
                             <div>
-                                <h4 className="text-4xl font-bold text-blue-900 mb-1">∞</h4>
+                                <h4 className="text-4xl font-bold text-slate-900 mb-1">∞</h4>
                                 <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">Memories</p>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ const About = () => {
                                     <feature.icon className="w-7 h-7" strokeWidth={1.5} />
                                 </div>
 
-                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors">
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-900 transition-colors">
                                     {feature.title}
                                 </h3>
                                 <p className="text-gray-500 leading-relaxed mb-6">

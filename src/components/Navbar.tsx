@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, MapPin } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -21,10 +21,16 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     <div className="shrink-0 flex items-center gap-2">
-                        <MapPin className="h-8 w-8 text-saffron" />
-                        <span className="font-serif font-bold text-xl text-blue-900">
-                            Viksit Bharat Darshan
-                        </span>
+
+                        <div className="flex flex-col">
+                            <span className="font-serif font-bold text-xl text-slate-900 leading-tight">
+                                Viksit Bharat Yatra
+                            </span>
+                            <div className="flex items-center gap-1.5 opacity-80 scale-90 origin-left">
+                                <span className="text-[10px] font-medium text-gray-500 uppercase tracking-widest">Powered by</span>
+                                <img src="/svaniti-logo.png" alt="Svaniti" className="h-4 object-contain grayscale hover:grayscale-0 transition-all" />
+                            </div>
+                        </div>
                     </div>
 
                     {/* Desktop Menu */}

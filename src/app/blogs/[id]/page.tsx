@@ -17,7 +17,7 @@ export default function BlogPostPage() {
         category: "Spiritual",
         image: "https://images.pexels.com/photos/3447333/pexels-photo-3447333.jpeg",
         content: `
-            <p>The first thing that hits you about Varanasi is the sensory overload. The smell of incense mixed with street food, the sound of temple bells ringing incessantly, and the visual spectacle of thousands of pilgrims bathing in the holy Ganges. As part of the Viksit Bharat Darshan Yatra, our stop here was not just about tourism; it was an immersion into the soul of India.</p>
+            <p>The first thing that hits you about Varanasi is the sensory overload. The smell of incense mixed with street food, the sound of temple bells ringing incessantly, and the visual spectacle of thousands of pilgrims bathing in the holy Ganges. As part of the Viksit Bharat Yatra, our stop here was not just about tourism; it was an immersion into the soul of India.</p>
 
             <h3>The Morning Aarti</h3>
             <p>We woke up at 4 AM to witness the Subah-e-Banaras. As the sun began to rise, painting the sky in hues of saffron and pink, the ghats came alive. Young Brahmin priests, synchronized in their movements, performed the Aarti with large brass lamps. The chanting of mantras reverberated through the air, creating a vibration that felt like it was cleansing you from within.</p>
@@ -29,7 +29,7 @@ export default function BlogPostPage() {
             <h3>Beyond the Spiritual</h3>
             <p>Our Yatra also took us to the Banaras Hindu University (BHU). Walking through its sprawling campus, we saw a different side of Varanasi – a center of learning and innovation. We interacted with students who are working on modern solutions for ancient problems, from cleaning the Ganges to preserving heritage manuscripts using AI.</p>
             
-            <p>This duality is what defines the Viksit Bharat Darshan Yatra. We are exploring our roots while simultaneously looking towards the future. Varanasi is not just a relic of the past; it is a breathing, evolving entity that contributes to the narrative of a developed India.</p>
+            <p>This duality is what defines the Viksit Bharat Yatra. We are exploring our roots while simultaneously looking towards the future. Varanasi is not just a relic of the past; it is a breathing, evolving entity that contributes to the narrative of a developed India.</p>
 
             <h3>Reflections</h3>
             <p>As we boarded the train to our next destination, I carried with me not just souvenirs, but a deeper understanding of what it means to be Indian. The noise, the chaotic traffic, the narrow lanes – they all seemed to fade away, leaving behind a profound sense of peace. If you ever get the chance, do not just visit Varanasi; experience it.</p>
@@ -125,7 +125,7 @@ export default function BlogPostPage() {
                             </div>
                         </div>
                         <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                            A passionate traveler and storyteller participating in the Viksit Bharat Darshan Yatra to discover the hidden gems of India.
+                            A passionate traveler and storyteller participating in the Viksit Bharat Yatra to discover the hidden gems of India.
                         </p>
                         <button className="w-full py-3 bg-white border border-gray-200 rounded-xl text-blue-900 font-bold hover:bg-blue-50 transition-colors text-sm">
                             View Profile
