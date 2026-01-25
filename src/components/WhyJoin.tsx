@@ -121,5 +121,4 @@ const WhyJoin = () => {
         </section>
     );
 };
-
 export default WhyJoin;
