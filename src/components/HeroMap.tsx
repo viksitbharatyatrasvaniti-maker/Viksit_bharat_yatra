@@ -10,15 +10,11 @@ const HeroMap = () => {
     const [images, setImages] = useState<string[]>([]);
     const [isMounted, setIsMounted] = useState(false);
 
-    // Projection config - Centered on India
+    // Projection config - Centered on India, zoomed to fill screen with Asia/surroundings
     const projectionConfig = {
-        scale: 700,
-        center: [80, 24]
+        scale: 550,
+        center: [78, 24]
     };
-
-    const relevantNeighbors = [
-        "Pakistan", "Nepal", "Bhutan", "Bangladesh", "Sri Lanka", "China", "Myanmar", "Afghanistan"
-    ];
 
     // 1. Fetch Images
     useEffect(() => {
@@ -65,32 +61,28 @@ const HeroMap = () => {
                     </mask>
                 </defs>
 
-                {/* Layer 1: World / Neighbors (Background) */}
-                {/* Render this FIRST so it is behind the images */}
+                {/* Layer 1: World (Background) */}
+                {/* Render ALL countries to fill the screen */}
                 <Geographies geography={worldUrl} style={{ pointerEvents: 'none' }}>
                     {({ geographies }: { geographies: any[] }) =>
                         geographies.map((geo) => {
                             const name = geo.properties.name;
-                            const isNeighbor = relevantNeighbors.includes(name);
                             if (name === "India") return null; // Skip official world map India
 
-                            if (isNeighbor) {
-                                return (
-                                    <Geography
-                                        key={geo.rsmKey}
-                                        geography={geo}
-                                        fill="#334155"
-                                        stroke="#1e293b"
-                                        strokeWidth={0.5}
-                                        style={{
-                                            default: { outline: "none" },
-                                            hover: { outline: "none", fill: "#475569" },
-                                            pressed: { outline: "none" },
-                                        }}
-                                    />
-                                );
-                            }
-                            return null;
+                            return (
+                                <Geography
+                                    key={geo.rsmKey}
+                                    geography={geo}
+                                    fill="#334155"
+                                    stroke="#1e293b"
+                                    strokeWidth={0.5}
+                                    style={{
+                                        default: { outline: "none" },
+                                        hover: { outline: "none", fill: "#475569" },
+                                        pressed: { outline: "none" },
+                                    }}
+                                />
+                            );
                         })
                     }
                 </Geographies>
