@@ -96,7 +96,7 @@ const HeroMap = () => {
                 <foreignObject x="0" y="0" width="800" height="600" mask="url(#india-mask)" style={{ pointerEvents: 'none' }}>
                     <div className="w-full h-full relative overflow-hidden bg-transparent">
                         {/* Image Grid Animation */}
-                        <div className="absolute inset-0 grid grid-cols-4 gap-1 animate-scroll-diagonal">
+                        <div className="absolute inset-0 grid grid-cols-4 animate-scroll-diagonal">
                             {images.length > 0 ? (
                                 [...images, ...images, ...images].map((src, i) => (
                                     <div key={i} className="relative aspect-3/4 w-full overflow-hidden">
