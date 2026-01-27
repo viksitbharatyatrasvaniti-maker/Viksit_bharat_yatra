@@ -10,24 +10,24 @@ const HeroMap = () => {
     const [images, setImages] = useState<string[]>([]);
     const [isMounted, setIsMounted] = useState(false);
 
-    // Projection config - Centered on India, zoomed to fill screen with Asia/surroundings
     const projectionConfig = {
         scale: 550,
-        center: [78, 24]
+        center: [78, 24],
     };
 
-    // 1. Fetch Images
     useEffect(() => {
         setIsMounted(true);
-        fetch('/api/gallery')
-            .then(res => res.json())
-            .then(data => {
+        fetch("/api/gallery")
+            .then((res) => res.json())
+            .then((data) => {
                 if (data.images) setImages(data.images);
             })
-            .catch(err => console.error("Failed to load gallery:", err));
+            .catch(() => {});
     }, []);
 
-    if (!isMounted) return <div className="w-full h-full bg-slate-900" />;
+    if (!isMounted) {
+        return <div className="w-full h-full bg-slate-900" />;
+    }
 
     return (
         <div className="w-full h-full flex items-center justify-center bg-slate-900 overflow-hidden relative">
@@ -35,14 +35,10 @@ const HeroMap = () => {
                 projection="geoMercator"
                 projectionConfig={projectionConfig}
                 className="w-full h-full max-h-[90vh]"
-                height={600}
                 width={800}
+                height={600}
             >
-                {/* 
-                    Define the Mask using the Geographies component itself.
-                    This ensures the mask path has the EXACT same projection as the map layers.
-                    White fill = visible area (India). Black/Empty = hidden.
-                */}
+                {/* Mask */}
                 <defs>
                     <mask id="india-mask" maskUnits="userSpaceOnUse">
                         <Geographies geography={indiaUrl}>
@@ -52,7 +48,8 @@ const HeroMap = () => {
                                         key={geo.rsmKey}
                                         geography={geo}
                                         fill="white"
-                                        stroke="none"
+                                        stroke="white"
+                                        strokeWidth={0.75}
                                         style={{ default: { outline: "none" } }}
                                     />
                                 ))
@@ -61,14 +58,11 @@ const HeroMap = () => {
                     </mask>
                 </defs>
 
-                {/* Layer 1: World (Background) */}
-                {/* Render ALL countries to fill the screen */}
-                <Geographies geography={worldUrl} style={{ pointerEvents: 'none' }}>
+                {/* World layer */}
+                <Geographies geography={worldUrl} style={{ pointerEvents: "none" }}>
                     {({ geographies }: { geographies: any[] }) =>
                         geographies.map((geo) => {
-                            const name = geo.properties.name;
-                            if (name === "India") return null; // Skip official world map India
-
+                            if (geo.properties.name === "India") return null;
                             return (
                                 <Geography
                                     key={geo.rsmKey}
@@ -87,36 +81,45 @@ const HeroMap = () => {
                     }
                 </Geographies>
 
-                {/* 
-                    Layer 2: The Image Layer (Foreground)
-                    We place this AFTER Layer 1 so it renders on TOP.
-                    We use a rect foreignObject that covers the whole canvas, 
-                    but we apply the mask so it only shows where India is.
-                */}
-                <foreignObject x="0" y="0" width="800" height="600" mask="url(#india-mask)" style={{ pointerEvents: 'none' }}>
+                {/* Image layer */}
+                <foreignObject
+                    x="0"
+                    y="0"
+                    width="800"
+                    height="600"
+                    mask="url(#india-mask)"
+                    style={{ pointerEvents: "none" }}
+                >
                     <div className="w-full h-full relative overflow-hidden bg-transparent">
-                        {/* Image Grid Animation */}
-                        <div className="absolute inset-0 grid grid-cols-4 animate-scroll-diagonal">
-                            {images.length > 0 ? (
+                        <div className="absolute inset-0 flex flex-wrap animate-scroll-diagonal">
+                            {images.length > 0 &&
                                 [...images, ...images, ...images].map((src, i) => (
-                                    <div key={i} className="relative aspect-3/4 w-full overflow-hidden">
+                                    <div
+                                        key={i}
+                                        className="relative overflow-hidden"
+                                        style={{
+                                            width: "25%",
+                                            aspectRatio: "3 / 4",
+                                            transform: "scale(1.02)",
+                                        }}
+                                    >
                                         <img
                                             src={src}
-                                            className="w-full h-full object-cover transform scale-110"
                                             alt="Viksit Bharat"
+                                            className="w-full h-full object-cover"
+                                            style={{
+                                                backfaceVisibility: "hidden",
+                                                imageRendering: "-webkit-optimize-contrast",
+                                            }}
                                         />
                                     </div>
-                                ))
-                            ) : (
-                                <div className="w-full h-full bg-saffron" />
-                            )}
+                                ))}
                         </div>
-                        {/* NO OVERLAY - Images only */}
                     </div>
                 </foreignObject>
 
-                {/* Layer 3: Official India Border (Outline Only) */}
-                <Geographies geography={indiaUrl} style={{ pointerEvents: 'none' }}>
+                {/* India outline */}
+                <Geographies geography={indiaUrl} style={{ pointerEvents: "none" }}>
                     {({ geographies }: { geographies: any[] }) =>
                         geographies.map((geo) => (
                             <Geography
@@ -136,14 +139,18 @@ const HeroMap = () => {
                 </Geographies>
             </ComposableMap>
 
-            {/* Animation Styles */}
             <style jsx global>{`
                 @keyframes scroll-diagonal {
-                    0% { transform: translateY(0) translateX(0); }
-                    100% { transform: translateY(-30%) translateX(-10%); }
+                    0% {
+                        transform: translate3d(0, 0, 0);
+                    }
+                    100% {
+                        transform: translate3d(-10%, -30%, 0);
+                    }
                 }
                 .animate-scroll-diagonal {
                     animation: scroll-diagonal 40s linear infinite alternate;
+                    will-change: transform;
                 }
             `}</style>
         </div>

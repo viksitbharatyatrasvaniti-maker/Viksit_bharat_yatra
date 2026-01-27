@@ -8,13 +8,12 @@ const Footer = () => {
                     {/* Brand */}
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
-                            <MapPin className="h-6 w-6 text-saffron" />
                             <span className="font-serif font-bold text-xl">
                                 Viksit Bharat Yatra
                             </span>
                         </div>
                         <p className="text-slate-100 text-sm">
-                            Showcasing the journey of India's development and cultural heritage.
+                            Where Individual Journeys Build a Nation.
                         </p>
                     </div>
 
