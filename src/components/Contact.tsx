@@ -30,10 +30,21 @@ const Contact = () => {
         setStatusMessage("");
 
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    to: "anuragkumartiwari12@gmail.com",
+                    subject: `New Contact Message from ${formData.firstName} ${formData.lastName}`,
+                    html: `
+                        <h3>New Contact Form Submission</h3>
+                        <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
+                        <p><strong>Email:</strong> ${formData.email}</p>
+                        <p><strong>Phone:</strong> ${formData.phone}</p>
+                        <p><strong>Message:</strong></p>
+                        <p>${formData.message}</p>
+                    `
+                })
             });
 
             const data = await response.json();
