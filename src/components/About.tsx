@@ -51,6 +51,13 @@ const features = [
     border: "group-hover:border-amber-200"
   },
   {
+    icon: Feather,
+    title: "Artistic and Creative Expression",
+    description: "Through the Yatra, individuals discover new forms of creative expression inspired by the cultures they encounter. Whether it’s art, music, or writing, these experiences become a catalyst for sharing their personal journey in creative ways.",
+    color: "bg-pink-50 text-pink-600",
+    border: "group-hover:border-pink-200"
+  },
+  {
     icon: Target,
     title: "Purpose alignment",
     description: "The Yatra helps align personal aspirations with meaningful action, enabling individuals to consciously contribute to the larger vision of a Viksit Bharat.",
@@ -63,13 +70,6 @@ const features = [
     description: "Each journey leaves a lasting legacy—insights, stories, and learnings that enrich the shared repository and guide future Yatris.",
     color: "bg-sky-50 text-sky-600",
     border: "group-hover:border-sky-200"
-  },
-  {
-    icon: Feather,
-    title: "Artistic and Creative Expression",
-    description: "Through the Yatra, individuals discover new forms of creative expression inspired by the cultures they encounter. Whether it’s art, music, or writing, these experiences become a catalyst for sharing their personal journey in creative ways.",
-    color: "bg-pink-50 text-pink-600",
-    border: "group-hover:border-pink-200"
   }
 ];
 
@@ -113,10 +113,6 @@ const About = () => {
                             <div>
                                 <h4 className="text-4xl font-bold text-slate-900 mb-1">28</h4>
                                 <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">States + UTs</p>
-                            </div>
-                            <div>
-                                <h4 className="text-4xl font-bold text-slate-900 mb-1">8</h4>
-                                <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">UTs</p>
                             </div>
                             <div>
                                 <h4 className="text-4xl font-bold text-slate-900 mb-1">∞</h4>
