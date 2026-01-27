@@ -9,7 +9,8 @@ import {
   ShieldCheck,
   Target,
   BookOpenCheck,
-  ArrowUpRight
+  ArrowUpRight,
+  Feather
 } from "lucide-react";
 import Link from "next/link";
 
@@ -62,6 +63,13 @@ const features = [
     description: "Each journey leaves a lasting legacy—insights, stories, and learnings that enrich the shared repository and guide future Yatris.",
     color: "bg-sky-50 text-sky-600",
     border: "group-hover:border-sky-200"
+  },
+  {
+    icon: Feather,
+    title: "Artistic and Creative Expression",
+    description: "Through the Yatra, individuals discover new forms of creative expression inspired by the cultures they encounter. Whether it’s art, music, or writing, these experiences become a catalyst for sharing their personal journey in creative ways.",
+    color: "bg-pink-50 text-pink-600",
+    border: "group-hover:border-pink-200"
   }
 ];
 
