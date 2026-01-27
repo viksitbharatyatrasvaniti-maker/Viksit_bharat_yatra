@@ -104,7 +104,7 @@ const About = () => {
                         <div className="flex gap-8">
                             <div>
                                 <h4 className="text-4xl font-bold text-slate-900 mb-1">28</h4>
-                                <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">States</p>
+                                <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">States + UTs</p>
                             </div>
                             <div>
                                 <h4 className="text-4xl font-bold text-slate-900 mb-1">8</h4>
