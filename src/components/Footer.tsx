@@ -32,18 +32,18 @@ const Footer = () => {
                     {/* Contact Info */}
                     <div>
                         <h3 className="font-serif font-bold text-lg mb-4 text-gold">Contact Us</h3>
-                        <ul className="space-y-2 text-slate-100">
+                        <ul className="space-y-3 text-slate-100">
                             <li className="flex items-center gap-2">
-                                <Mail className="h-4 w-4" />
-                                <span>info@viksitbharat.gov.in</span>
+                                <Mail className="h-4 w-4 text-saffron" />
+                                <a href="mailto:office@svaniti.in" className="hover:text-white transition-colors">office@svaniti.in</a>
                             </li>
                             <li className="flex items-center gap-2">
-                                <Phone className="h-4 w-4" />
-                                <span>+91 11 2345 6789</span>
+                                <Phone className="h-4 w-4 text-saffron" />
+                                <a href="tel:+919067547325" className="hover:text-white transition-colors">+91 90675 47325</a>
                             </li>
-                            <li className="flex items-center gap-2">
-                                <MapPin className="h-4 w-4" />
-                                <span>New Delhi, India</span>
+                            <li className="flex items-start gap-2">
+                                <MapPin className="h-4 w-4 text-saffron mt-1 shrink-0" />
+                                <span className="text-sm">Ukabhai Solanki Marg, Upleta – 360 490, Gujarat, India</span>
                             </li>
                         </ul>
                     </div>

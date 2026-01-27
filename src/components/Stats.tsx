@@ -40,11 +40,11 @@ const Stats = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <div className="text-7xl md:text-9xl font-bold mb-4 font-mono tracking-tighter drop-shadow-md">
-                        <Counter from={0} to={100}/>
+                    <div className="text-6xl md:text-9xl font-bold mb-4 font-mono tracking-tighter drop-shadow-md">
+                        <Counter from={0} to={125088}/> Kms traveled
                     </div>
                     <div className="text-2xl md:text-4xl font-serif font-medium tracking-wide text-orange-100">
-                        crore kilometers by 2047
+                       100 crore kilometers by 2047
                     </div>
                 </motion.div>
 

@@ -29,13 +29,6 @@ const AboutYatra = () => {
                 <div className="absolute inset-0 bg-linear-to-b from-blue-900/50 to-blue-950"></div>
 
                 <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-                    <motion.span
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        className="inline-block py-1 px-3 rounded-full bg-saffron/20 border border-saffron/30 text-saffron text-sm font-semibold mb-6 backdrop-blur-sm"
-                    >
-                        Vision & Philosophy
-                    </motion.span>
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -43,7 +36,7 @@ const AboutYatra = () => {
                         className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight"
                     >
                         Viksit Bharat <br />
-                        <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-yellow-200">Darshan Yatra</span>
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-yellow-200">Yatra</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
@@ -61,14 +54,16 @@ const AboutYatra = () => {
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <motion.div {...fadeIn}>
                         <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 mb-8">
-                            Not Tourism, <br />But <span className="text-saffron">Darshan</span>
+                            Not for Tourists,
+ <br />But for <span className="text-saffron">Darshak</span>
                         </h2>
                         <div className="prose prose-lg text-gray-600">
                             <p className="mb-6">
-                                The Yatra is framed not as ordinary tourism but as <strong>Darshan</strong>—seeing, experiencing, and evolving. By zooming out and seeing beyond one's cultural conditioning, travelers gain wisdom and inspiration.
+                                This Yatra is not designed for tourists, but for Darshak—those who seek darshan. In the Indian philosophical tradition, darshan does not mean sightseeing; it means to truly see. To see beyond appearances, beyond routines, and beyond conditioning. When one steps away from familiar environments and experiences Bharat consciously, something deeper unfolds. Through people, cultures, conversations, and lived realities, individuals begin to understand not only the world around them, but also the self within.
+
                             </p>
                             <p>
-                                It is a journey that "shakes a person mentally, physically, and emotionally," allowing new meaning and purpose to emerge. It fosters sensitivity to values, culture, and community, shaping individuals who truly live rather than merely function.
+                                Darshan does not emerge from contemplation alone—it arises through experience. As the Yatra unfolds, individuals are shaped by what they witness and whom they meet. This shaping creates individuals who do not merely function within life, but engage with it meaningfully—sensitive to values, culture, community, and purpose. Such journeys give rise to inner clarity, courage, and wisdom, allowing personal growth to naturally align with the larger idea of a Viksit Bharat—one shaped not just by outcomes, but by evolved individuals.
                             </p>
                         </div>
                     </motion.div>
@@ -129,19 +124,19 @@ const AboutYatra = () => {
                         {[
                             {
                                 title: "Curation",
-                                desc: "Personalized, thematic trip planning based on each Yatri's interests. Drawing from a repository of 100,000 km of travel experience, we craft distinct journeys that resonate with your personal aspirations.",
+                                desc: "Curation ensures that each journey is thoughtfully crafted to reflect your personal aspirations and goals. It’s not random travel, it’s a purposeful path that helps you grow and discover.",
                                 image: "https://images.pexels.com/photos/5458388/pexels-photo-5458388.jpeg",
                                 tag: "Personalized Journeys"
                             },
                             {
                                 title: "Community",
-                                desc: "An ongoing network of Yatris, mentors, and changemakers. Connected through regional meet-ups, annual summits, and digital platforms, this ecosystem fosters lifelong bonds and organic collaboration.",
+                                desc: "Community connects you with others on similar journeys. You learn from each other’s experiences and share in a larger collective vision, making the experience richer.",
                                 image: "https://images.pexels.com/photos/3447333/pexels-photo-3447333.jpeg",
                                 tag: "Lifelong Bonds"
                             },
                             {
                                 title: "Continuity",
-                                desc: "Ensuring benefits endure beyond the trip. Yatris document learnings in their Passport and contribute to a shared knowledge repository, fueling a virtuous cycle of insight for the nation.",
+                                desc: "Continuity means the Yatra doesn’t stop when the trip ends. What you experience continues to shape you and the collective journey ahead. Each step feeds into the next, keeping the vision of Viksit Bharat alive in your life.",
                                 image: "https://images.pexels.com/photos/1707402/pexels-photo-1707402.jpeg",
                                 tag: "Enduring Impact"
                             }
@@ -224,7 +219,7 @@ const AboutYatra = () => {
 
             {/* Tools & Global Impact */}
             {/* Tools & Global Impact */}
-            <section className="py-24 bg-orange-50 text-gray-900 relative overflow-hidden">
+            {/* <section className="py-24 bg-orange-50 text-gray-900 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-200/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -276,7 +271,7 @@ const AboutYatra = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section */}
             <CTA />
