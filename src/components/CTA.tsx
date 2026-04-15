@@ -37,7 +37,7 @@ const CTA = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <Link href="/register"
+                        <Link href="https://tally.so/r/QKJzxX"
                             className="group relative px-8 py-4 bg-saffron text-white text-lg font-bold rounded-full overflow-hidden shadow-lg hover:shadow-orange-500/30 transition-all hover:scale-105 block text-center"
                         >
                             <span className="relative z-10 flex items-center gap-2 justify-center">

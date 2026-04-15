@@ -44,7 +44,7 @@ const Navbar = () => {
                                 {link.name}
                             </Link>
                         ))}
-                        <Link href="/register" className="bg-saffron text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-500/30">
+                        <Link href="https://tally.so/r/QKJzxX" className="bg-saffron text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-500/30">
                             Register Now
                         </Link>
                     </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
                                     {link.name}
                                 </Link>
                             ))}
-                            <Link href="/register" className="block w-full text-center mt-4 bg-saffron text-white px-4 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors">
+                            <Link href="https://tally.so/r/QKJzxX" className="block w-full text-center mt-4 bg-saffron text-white px-4 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors">
                                 Register Now
                             </Link>
                         </div>

@@ -60,7 +60,7 @@ const Hero = () => {
                         className="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-12 w-full px-4"
                     >
                         <a
-                            href="/register"
+                            href="https://tally.so/r/QKJzxX"
                             className="px-5 py-2.5 text-sm sm:px-8 sm:py-3 sm:text-lg bg-saffron text-white font-semibold rounded-full shadow-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 border border-saffron whitespace-nowrap"
                         >
                             Join the Yatra
