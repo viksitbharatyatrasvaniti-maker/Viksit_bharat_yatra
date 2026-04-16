@@ -17,6 +17,9 @@ const merriweather = Merriweather({
 export const metadata: Metadata = {
   title: "Viksit Bharat Yatra",
   description: "Experience the journey of a developed India.",
+  icons: {
+    icon: "/favicon.jpeg",
+  },
 };
 
 import ClientLayout from "@/components/ClientLayout";
@@ -28,6 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.jpeg" type="image/jpeg" />
+      </head>
       <body
         className={`${inter.variable} ${merriweather.variable} antialiased`}
       >
